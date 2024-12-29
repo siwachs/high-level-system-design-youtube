@@ -1,0 +1,7 @@
+1) Play video on Client (Any URL using S3)
+
+2) Upload Service -> Upload on S3 and test using Postman
+
+3) Send Upload Request from Client to server with file
+
+4) Extract file from this and upload it on s3
