@@ -5,3 +5,25 @@
 3) Send Upload Request from Client to server with file
 
 4) Extract file from this and upload it on s3
+
+AWS S3
+ETag (Entity Tag) is a unique identifier (or hash) that is assigned to a specific version of an object stored in S3.
+
+
+Usage of Kafka
+In this Upload service act as Producer and transcoder act as Consumer
+
+Onr cloud base solution for Kafka is
+https://aiven.io
+
+On uploading we need to do:
+1) Content Filtering like check for explicit content in videos
+2) Copyright issues
+3) Transcoding (Transform in different format)
+
+Solution: PubSub
+
+Video ---> Goes to PubSun ie Kafka ---> And now different services can pick same message and use it ie consume message and use it.
+For example transcoder consume this message and use it.
+
+Or in Short Push a message to PubSun and that message should be consume by other service such as transcoder.
